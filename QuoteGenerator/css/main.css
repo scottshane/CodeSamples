@@ -1,0 +1,346 @@
+/* http://www.endmemo.com/sconvert/pixelpoint.php */
+
+@keyframes pulse-up {
+    0% { transform: scale(1) }
+    50% {transform: scale(2)}
+    100% { transform: scale(1) }
+}
+
+@keyframes slide-in-next {
+    0% { transform: translate3d(-100vw,0,0); }
+    100% { transform: translate3d(0,0,0); }
+}
+
+@keyframes slide-out-next {
+    0% { transform: translate3d(0,0,0); }
+    100% { transform: translate3d(100vw,0,0); }
+}
+
+@keyframes slide-in-prev {
+    0% { transform: translate3d(100vw,0,0); }
+    100% { transform: translate3d(0,0,0); }
+}
+
+@keyframes slide-out-prev {
+    0% { transform: translate3d(0,0,0); }
+    100% { transform: translate3d(-100vw,0,0); }
+}
+
+.show-for-small { display: none; }
+
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.like {
+    cursor: pointer;
+    color: #fff;
+    background: rgba(0,0,0,0.10);
+    border-radius: 20px;
+    position: absolute;
+    right: 20px;
+    top:20px;
+    padding-left:10px;
+    padding-right: 10px;
+    /* min-width: 25px; */
+    height:30px;
+    display: flex;
+    align-items: center;
+}
+
+.slide-in-next{
+    -webkit-animation: slide-in-next .5s ease;
+    -o-animation: slide-in-next .5s ease;
+    animation: slide-in-next .5s ease;
+}
+.slide-out-next{
+    -webkit-animation: slide-out-next .5s ease;
+    -o-animation: slide-out-next .5s ease;
+    animation: slide-out-next .5s ease;
+}
+
+.slide-in-prev{
+    -webkit-animation: slide-in-prev .5s ease;
+    -o-animation: slide-in-prev .5s ease;
+    animation: slide-in-prev .5s ease;
+}
+
+.slide-out-prev{
+    -webkit-animation: slide-out-prev .5s ease;
+    -o-animation: slide-out-prev .5s ease;
+    animation: slide-out-prev .5s ease;
+}
+
+.like .icon-heart.liked{
+    color: #bb0f23;
+    animation: pulse-up .5s;
+}
+.like .icon-heart {
+    animation: pulse-down .5s ease;
+}
+.like span {
+    font-family: 'Roboto';
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 1em;
+}
+
+cite {
+    font-family: "Open Sans";
+    font-size: 20px;
+    margin-top: 50px;
+    font-style: normal;
+    display: block;
+}
+
+aside.graphic {
+    width: 170px;
+    overflow: hidden;
+    position: relative;
+    background: #282a37;
+    flex: 0 0 auto;
+}
+
+nav {
+    position: absolute;
+    bottom: 28px;
+    color: #fff;
+    width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+nav span {
+    cursor: pointer;
+    display: block;
+    font-size: 22px;
+    position: relative;
+    float: left;
+    text-align: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+nav span:hover{
+    background: rgba(0,0,0,0.5);
+}
+
+nav span:last-child {
+    float: right;
+    text-align:right;
+}
+
+nav i {
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+i.icon-quotes {
+    position: absolute;
+    font-size: 4rem;
+    left: -160px;
+    opacity: 0.1;
+}
+section.quote {
+    background: #18a0ff;
+    position: relative;
+    width: 100%;
+}
+
+.root {
+    display: flex;
+    height: 490px;
+}
+
+img {
+    transform: scale(1) translate(-45%,-4%);
+    opacity: 0.2;
+}
+
+blockquote {
+    text-transform: uppercase;
+    font-size: 4em;
+    line-height: 1;
+    font-family: Montserrat;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: -1px;
+    height: 370px;
+    position: relative;
+    margin: 60px 85px 60px 40px;
+}
+blockquote p {
+    margin:0;
+    padding:0;
+}
+blockquote p.fitted-minor { font-size: 3.4rem;}
+blockquote p.fitted {font-size: 2.4rem;}
+blockquote p.fitted-major {font-size: 2.65rem;}
+
+@media screen and (max-width: 769px) {
+    .hide-for-small { display: none; }
+    .show-for-small { display: initial;}
+}
+
+/* ----------- iPhone 6 ----------- */
+/* Portrait and Landscape */
+@media only screen
+  and (min-width: 320px)
+  and (max-width: 667px) {
+      i.icon-quotes {
+           /*left: -105px;*/
+           left: -75px;
+           font-size: 3rem;
+    }
+    nav span:hover {
+        background: none;
+    }
+      blockquote {
+          height: auto;
+          margin-left: 100px;
+      }
+      blockquote p,
+      blockquote p.fitted-minor {font-size: 2rem;}
+      blockquote p.fitted,
+      blockquote p.fitted-major {font-size: 1.45rem;}
+
+      section.quote {
+          height: 100vh;
+      }
+
+      .root {
+          height: 100vh;
+      }
+}
+
+@media only screen and (max-width: 400px) and (min-width: 320px) {
+    /*blockquote{
+        margin-left: 110px;
+    }*/
+
+    /*blockquote p,
+    blockquote p.fitted,
+    blockquote p.fitted-minor {font-size: 60%;}
+    blockquote p.fitted-major {font-size: 50%;}
+    i.icon-quotes{
+        font-size: 3rem;
+        left: -75px;
+    }*/
+}
+/* Portrait */
+@media only screen
+  and (min-width: 320px)
+  and (max-width: 667px)
+  and (orientation: portrait) {
+      .root {
+          flex-direction: column;
+      }
+      aside.graphic {
+          width: 100%;
+          max-height: 177px;
+          order: 2;
+      }
+      section.quote {
+          height: 100vh;
+          display: flex;
+          align-items: center;
+      }
+      nav {
+          width: 80%;
+          bottom: 50%;
+          transform: translate(-50%, 50%);
+      }
+      .graphic img {
+          width: 100%;
+          transform: scale(1.8) translate(-4%,6%);
+      }
+      blockquote {
+          margin-left: 100px;
+      }
+
+      blockquote p,
+      blockquote p.fitted-minor {font-size: 1.75rem;}
+  }
+
+/* ----------- iPad 1 and 2 ----------- */
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px) {
+      .root {
+          height: 100vh;
+      }
+      aside.nav {}
+
+      blockquote{
+          max-height: 40%;
+          margin-top: 80px;
+      }
+
+      nav span:hover {
+        background: none;
+    }
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait) {
+      .root {
+          flex-direction: column;
+      }
+      aside.graphic {
+          width: 100%;
+          max-height: 177px;
+          order: 2;
+      }
+      section.quote {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+      blockquote {
+          margin-left: 125px;
+      }
+      i.icon-quotes{
+          font-size: 3rem;
+          left: -80px;
+      }
+      nav {
+          width: 80%;
+          bottom: 50%;
+          transform: translate(-50%, 50%);
+      }
+      .graphic img {
+          width: 100%;
+          transform: scale(1.8) translate(-4%,6%);
+      }
+      i.icon-quotes{}
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape) {
+      section.quote {
+          display: flex;
+          height: 100vh;
+          align-items: center;
+          width: 100%;
+      }
+      blockquote{
+          height: auto;
+          flex: 0 1 auto;
+      }
+      aside.graphic {
+              height: 100vh;
+      }
+}
