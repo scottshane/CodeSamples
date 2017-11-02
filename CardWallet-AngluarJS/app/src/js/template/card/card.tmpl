@@ -1,0 +1,5 @@
+<div class="card-vendor">
+  <img ng-src="assets/{{card.vendorLogo}}.svg" alt="{{card.vendor}} card image">
+</div>
+<div class="card-number" data-card-number>{{card.accountNumber | obsfucated}}</div>
+<div class="card-expiry" data-card-expiry>Valid thru <span>{{card.expiry}}</span></div>

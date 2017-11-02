@@ -1,0 +1,24 @@
+{
+    "extends": "airbnb",
+    "rules": {
+        "no-unused-vars": [2, { "args": "none" }],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "import/no-extraneous-dependencies": ["error", {
+                "devDependencies": true,
+                "optionalDependencies": true, 
+                "peerDependencies": true,
+                "packageDir": "./"
+            }]
+
+    },
+    "globals": {
+        "fetch": true,
+        "Blob": true,
+        "document": true
+    },
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ]
+}

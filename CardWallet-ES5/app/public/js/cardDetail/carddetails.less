@@ -1,0 +1,65 @@
+.card-transactions {
+  .entries{
+    padding: 50px 0 0;
+    margin: 0;
+    position: relative;
+    margin-left: 30px;
+
+    dt, dd{ margin-bottom: 50px; }
+    dt{
+      float: left;
+      clear: left;
+      position: relative;
+      font-size: 18px;
+      color: #666666;
+      font-weight: bold;
+      padding-left:20px;
+      letter-spacing: 1px;
+
+      &::after {
+        content: "-";
+        width: 20px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        transform: translateY(-50%);
+        min-height: 20px;
+        background: rgba(0, 0, 0, 0);
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        text-align: center;
+        line-height: 16px;
+        font-size: 1.15em;
+        font-family: monospace;
+        font-weight: 100;
+      }
+      &.credit::after {
+        content: "+";
+        line-height: 18px;
+      }
+      > span {
+        display: block;
+        font-weight: normal;
+        color: #707584;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+    }
+    dd{
+      margin-left: 0;
+      float: right;
+      font-size: 18px;
+      font-weight: bold;
+      color: #8393ca;
+      &.credit {
+        color: #72CD49;
+      }
+
+      sup {
+        vertical-align: top;
+        font-size: 0.55em;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.category-filter{
+  button {
+    border: none;
+    font-size: 1.2rem;
+    background: white;
+    outline: none;
+    margin-top: 10px;
+  }
+  flex: 1 0 auto;
+  > div {
+    display: block;
+    border: 1px solid #e3e3e3;
+
+    label{
+      display: block;
+      padding: 0 10px 10px 5px;
+      &:first-child{
+        padding-top: 10px;
+      }
+      &:hover{
+        background: #e8e8e8;
+      }
+    }
+  }
+}

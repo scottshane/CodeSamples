@@ -1,0 +1,96 @@
+/* Used for placement. Left in for your convience.
+************************************************************* */
+/* uncomment an add dev class to html tag
+html.dev body{ background: url(../img/expected-desktop-result.jpg) no-repeat 0 0; }
+html.dev .SlidingPuzzleFigure{
+    opacity: .5;
+    color: #ff69b4;
+}
+*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+ol, ul {
+    list-style: none;
+}
+ul, li{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.SlidingPuzzleFigure {
+    color: #000;
+    margin: 32px 0 0 32px;
+}
+
+.SlidingPuzzleFigure .SlidingPuzzle {
+    background: #000;
+    position:relative;
+    border-radius: 6px;
+    height: 204px;
+    overflow: hidden;
+    width: 204px;
+    border-color: #000;
+    border-top: 9px solid;
+    border-right: 11px solid;
+    border-bottom: 11px solid;
+    border-left: 9px solid;
+}
+
+.SlidingPuzzleFigure > figcaption {
+    font-size: 19px;
+    font-kerning: normal;
+    font-style: italic;
+    margin: 5px 0 0 24px;
+}
+
+.SlidingPuzzleFigure .SlidingPuzzle .Tile {
+    background: #fff;
+    border: 6px outset #ccc;
+    position: relative;
+    display: block;
+    float:left;
+    font-size: 32px;
+    height: 56px;
+    line-height: 57px;
+    text-align: center;
+    width: 56px;
+}
+.SlidingPuzzleFigure .SlidingPuzzle .Tile.xy {
+    -webkit-transition: top .24s ease, left .24s ease;
+}
+
+.Tile.empty {
+    opacity: 0;
+}
+
+@media (max-width: 500px) {
+/* Used for placement. Left in for your convience.
+************************************************************* */
+/* uncomment an add dev class to html tag
+ 
+    html.dev body {
+      background: url(../img/expected-mobile-result.jpg) no-repeat 0 0;
+      background-size: 100%;
+    }
+*/
+
+    .SlidingPuzzleFigure {
+        margin-top: 31px;
+    }
+    .SlidingPuzzleFigure > figcaption {
+        margin-top: 4px;
+    }
+}

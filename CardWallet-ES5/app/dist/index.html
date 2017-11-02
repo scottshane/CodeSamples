@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ron Swanson's Wallet</title>
+  <link rel="stylesheet" href="css/dist.css" media="screen">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <aside class="wallet">
+      <header class="wallet-header">Ron's Wallet <button type="button" class="add-card-button">
+        <i class="icon-add"></i>+</button>
+      </header>
+      <form action="" method="POST" class="add-card hide" >
+        <fieldset>
+          <select required name="vendor">
+            <option name="vendor" value="visa">Visa</option>
+            <option name="vendor" value="mastercard">Mastercard</option>
+            <option name="vendor" value="american-express">American express</option>
+          </select>
+          <label for="accountNumber">
+            <input pattern="[0-9]{13,16}" name="accountNumber" type="text" required value="" placeholder="1234123412341234">
+          </label>
+          <label for="expiry">
+            <input name="expiry" type="date" required value="" placeholder="01/01/2020">
+          </label>
+          <button type="submit" name="button">Add Card</button>
+        </fieldset>
+      </form>
+      <div class="cards-list"></div>
+    </aside>
+    <section class='card-transactions'>
+      <header class="card-balance">Current Balance<span>$4233.23</span></heade>
+        <dl class="entries">
+          <dt>Lagavulin 16yr
+            <span class="transaction-details">Electonics #xxxxx xx/xx/xxxx</span>
+          </dt>
+          <dd class="transaction-amount">$xx.<sup>xx</sup></dd>
+          <dt>Lagavulin 16yr
+            <span class="transaction-details">Electonics #xxxxx xx/xx/xxxx</span>
+          </dt>
+          <dd class="transaction-amount">$xx.<sup>xx</sup></dd>
+        </dl>
+      </section>
+    </main>
+    <script src="js/dist.js" charset="utf-8"></script>
+  </body>
+  </html>

@@ -1,0 +1,9 @@
+<dt ng-repeat-start="trans in vm.selectedCard.transactionDetails" 
+    class="{{trans.type}}">{{trans.title}}
+  <span class="transaction-details">
+    {{trans.category}} {{trans.transaction}} {{trans.date}}
+  </span>
+</dt>
+<dd ng-repeat-end class="transaction-amount {{trans.type}}" 
+    ng-bind-html="trans.amount | currency | supscript"> </dd>
+

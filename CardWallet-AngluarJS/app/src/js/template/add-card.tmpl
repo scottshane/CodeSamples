@@ -1,0 +1,17 @@
+<button ng-click=vm.addCard(); type="button" class="add-card-button"><i class="icon-add"></i>+</button>
+<form action="" method="POST" class="add-card hide" >
+  <fieldset>
+    <select required name="vendor">
+      <option name="vendor" value="visa">Visa</option>
+      <option name="vendor" value="mastercard">Mastercard</option>
+      <option name="vendor" value="american-express">American express</option>
+    </select>
+    <label for="accountNumber">
+      <input pattern="[0-9]{13,16}" ng-model='vm.accountNumber' name="accountNumber" type="text" required value="" placeholder="1234123412341234">
+    </label>
+    <label for="expiry">
+      <input name="expiry" type="date" required value="" placeholder="01/01/2020">
+    </label>
+    <button type="submit" name="button">Add Card</button>
+  </fieldset>
+</form>

@@ -1,0 +1,213 @@
+html * {
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+body {
+  background: #434345;
+  padding: 0px;
+  margin: 0;
+}
+card,
+balance {
+  display: block;
+}
+div {
+  position: relative;
+}
+main {
+  display: flex;
+  border-radius: 10px;
+  background: #fff;
+  margin: 12px;
+  height: 80vh;
+  min-width: 975px;
+}
+aside,
+section {
+  overflow: auto;
+}
+.wallet {
+  flex-shrink: 0;
+  width: 350px;
+  padding: 0 50px;
+  background-color: #f2f2f2;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.card-transactions {
+  width: 100%;
+  padding: 0 60px;
+}
+.hide {
+  display: none;
+}
+.wallet-header {
+  border: none;
+  width: 100%;
+  max-width: 250px;
+  padding: 60px 0;
+  font-size: 1.125rem;
+  font-size: 1.3rem;
+  color: #707584;
+  letter-spacing: 1px;
+}
+.add-card {
+  padding: 20px;
+  height: 150px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  max-width: 250px;
+  position: relative;
+}
+.add-card fieldset {
+  font-family: 'Open Sans';
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.add-card fieldset > *:first-child {
+  margin-top: 0;
+}
+.add-card input,
+.add-card select {
+  font-size: .85rem;
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+}
+.add-card button[type="submit"] {
+  background: #44c7f4;
+  font-size: .85rem;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  float: right;
+}
+.add-card-button {
+  float: right;
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  font-size: 50px;
+  font-weight: 100;
+  line-height: 0.2;
+  cursor: pointer;
+  color: #c6cce2;
+  outline: none;
+  transform: rotate(0);
+  transition: all .25s ease;
+}
+.add-card-button.close {
+  color: tomato;
+  transform: rotate(45deg);
+}
+balance {
+  padding: 60px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.3rem;
+  color: #707584;
+  letter-spacing: 1px;
+}
+balance span {
+  float: right;
+  font-size: 1.875rem;
+  line-height: 0.8;
+  color: #444;
+  font-weight: bold;
+}
+balance sup {
+  vertical-align: top;
+  font-size: 0.55em;
+}
+card {
+  padding: 20px;
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  max-width: 250px;
+  position: relative;
+  transition: border .25s ease;
+}
+card.selected {
+  border: 4px solid #8595C9;
+}
+card img {
+  width: 64px;
+  height: 44px;
+}
+card .card-vendor {
+  margin-bottom: 15px;
+}
+card .card-expiry {
+  color: #999;
+  font-size: .875rem;
+}
+.card-transactions .entries {
+  padding: 50px 0 0;
+  margin: 0;
+  position: relative;
+  margin-left: 30px;
+}
+.card-transactions .entries dt,
+.card-transactions .entries dd {
+  margin-bottom: 50px;
+}
+.card-transactions .entries dt {
+  float: left;
+  clear: left;
+  position: relative;
+  font-size: 18px;
+  color: #666666;
+  font-weight: bold;
+  padding-left: 20px;
+  letter-spacing: 1px;
+}
+.card-transactions .entries dt::after {
+  content: "-";
+  width: 20px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  min-height: 20px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 16px;
+  font-size: 1.15em;
+  font-family: monospace;
+  font-weight: 100;
+}
+.card-transactions .entries dt.credit::after {
+  content: "+";
+  line-height: 18px;
+}
+.card-transactions .entries dt > span {
+  display: block;
+  font-weight: normal;
+  color: #707584;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.card-transactions .entries dd {
+  margin-left: 0;
+  float: right;
+  font-size: 18px;
+  font-weight: bold;
+  color: #8393ca;
+}
+.card-transactions .entries dd.credit {
+  color: #72CD49;
+}
+.card-transactions .entries dd sup {
+  vertical-align: top;
+  font-size: 0.55em;
+}

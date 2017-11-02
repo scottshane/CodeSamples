@@ -1,0 +1,48 @@
+.card-list{
+  padding-left: 24px;
+  padding-right: 24px;
+  list-style: none;
+  list-style: none;
+
+  .active {
+    outline: 1px solid #1ea6e6;
+    box-shadow: 0 2px 8px #666;
+  }
+}
+
+.card {
+  font-family: sans-serif;
+  padding: 15px;
+  margin: 20px 0;
+  background: #fff;
+
+  &-vendor-logo {
+    width: 40%;
+    padding-bottom: 15px;
+  }
+
+  &-acct-num { 
+    color: #525252;
+    font-size: .9375rem;
+    letter-spacing: 0.05rem;
+    margin: 0 0 7px;
+ }
+
+  &-expiry {
+    margin:0;
+    color: #8a8a8a;
+  }
+}
+
+.cards{
+
+  .add-card {
+    width: 100%;
+    height: 30px;
+    border: none;
+    text-align: left;
+    outline: none;
+    padding-left: 40px;
+  }
+
+}

@@ -1,0 +1,43 @@
+.statement {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+}
+
+.tableWrapper {
+  width: 100%;
+  flex:1 1 auto;
+}
+.transaction-details-list{
+  width:100%;
+  text-align: left;
+  border-collapse: collapse;
+  td{
+    border: 1px solid #d8d8d8;
+    padding: 10px;
+  }
+
+  tbody > tr:nth-child(2n-1) {
+    background: #f7f7f7;
+  }
+}
+.trans-{
+  &type{
+    text-align: center;
+    &.debit, &.credit{
+      padding: 10px;
+      font-size: 1.2rem;
+    }
+    &.debit{ color: rgb(96, 180, 206); }
+    &.credit{ color: rgb(99, 255, 159); }
+  }
+  &amount{ text-align: right; }
+  &category{}
+  &date{}
+  &title{} 
+  &transaction-id{ 
+    font-size: .785em;
+  }
+  &type{}
+  &vendor{}
+}

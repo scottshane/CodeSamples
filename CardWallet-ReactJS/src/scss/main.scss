@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Play');
+@import 'cards';
+@import 'details';
+@import 'selectFilter';
+
+// font variables
+$play: 'Play', sans-serif;
+$lobster: 'Lobster', cursive;
+
+body{
+  font-family: $play;
+  font-size: .875rem;
+  background: #8d8d8d;
+}
+div{
+  box-sizing: border-box;
+  position: relative;
+}
+//sections
+.card-ledger{
+  display: flex;
+  flex-direction: row;
+  border:1px solid #c4c4c4;
+  border-radius: 7px;
+  background: #fefefe;
+}
+
+.cards {
+  flex: 0 0 225px;
+  padding-top: 40px;
+  background: #efefef;
+  header {
+    border-bottom: 1px solid #d8d8d8;
+    margin-left: 40px;
+  }
+}
+
+.card-transactions{
+  flex: 1 1 auto;
+  padding:40px;
+
+  header{
+    border-bottom: 1px solid #d8d8d8;
+    span{
+      display: inline-block;
+      float: right;
+    }
+  }
+}
+
+.add-card-button{
+  width: 100%;
+  height: 30px;
+  border: none;
+  text-align: left;
+  outline: none;
+  padding-left: 40px;
+  font-size: 1.1em;
+}
+
+.add-card-control-group {
+  form{
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #fff; 
+  }
+  fieldset{
+    background: silver;
+    border: none;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #777;
+    border-top: 1px solid #f7f6f6;
+  }
+  label{
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: .8em;
+  }
+  select { width: 100%; }
+  input {width: 189px; }
+  button[type="submit"] {
+    margin-top: 20px;
+    text-align: right;
+    float: right;
+    margin-right: 10px;
+  }
+}
